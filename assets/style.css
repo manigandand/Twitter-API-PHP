@@ -1,0 +1,489 @@
+/**
+ * Twitter PHP API
+ * basic styling for demo pages
+ *
+ * @link https://github.com/manigandand/Twitter-API-PHP
+ * @author Manigandan
+ * @since 27.7.2016
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+html {
+  height: 100%;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+body {
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  background: #f9f9f9;
+  font-weight: 300;
+  font-size: 15px;
+  color: #333;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+a.login:hover {
+    color: #55acee;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.global-nav {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    height: 46px;
+    position: relative;
+    width: 100%;
+}
+.nav-pad{
+  padding-top: 2px;
+  padding-left: 4%;
+}
+.tweet-div{
+  display: inline-block;
+  position: relative;
+  height: 41px;
+  overflow: hidden;
+  padding-top: 7px;
+  margin-right: 15px;
+}
+.home-icon{
+  float: left;
+  margin: 11px 0 0 10px;
+  width: 24px;
+  height: 24px;
+}
+.twitter-fa{
+  color: #1da1f2;
+  font-size: 25px;
+  margin-top: 13px;
+  display: inline-block;
+  transition: all .25s ease-in-out;
+  cursor: pointer;
+}
+.signout-fa{
+  color: #1da1f2;
+  font-size: 25px;
+  margin-top: 6px;
+  display: inline-block;
+  transition: all .25s ease-in-out;
+  cursor: pointer;
+}
+.signout-fa:hover{
+  color: rgba(241, 6, 6, 0.83);
+}
+.text{
+  color: #1da1f2;
+  float: left;
+  margin-left: 3px;
+  margin-top: 15px;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.size32 {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: 0;
+  margin-top: 1px;
+}
+.ProfileCanopy-avatar {
+  top: -37%;
+  left: 14%;
+  position: absolute;
+  transition: bottom .3s;
+  z-index: 3;
+}
+.ProfileCanopy-navBar {
+  background-color: #fff;
+  border-bottom: 1px solid #e1e8ed;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 60px;
+  padding-left: 33%;
+}
+.ProfileNav-stat {
+  display: inline-block;
+  height: 60px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid;
+  border-color: #1B95E0 !important;
+  line-height: 1;
+  padding: 14px 15px 7px;
+  transition: all .15s ease-in-out;
+  text-align: center;
+  margin-right: 5px;
+  color: #66757f;
+  cursor: pointer;
+}
+.ProfileNav-stat:hover {
+  color: #1da1f2;
+  border-bottom: 4px solid;
+}
+.ProfileNav-label {  
+  font-size: 11px;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  transition: color .15s ease-in-out;
+  display: block;
+  line-height: 1.3;
+}
+.ProfileNav-value {
+  font-size: 18px;
+  padding-top: 3px;
+  font-weight: 400;
+  transition: color .15s ease-in-out;
+  color: #333;
+  line-height: 1.3;
+}
+.ProfileAvatar {
+  background: #fff;
+  border: 5px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 1px rgba(136,153,166,0.15);
+  height: 200px;
+  position: relative;
+  width: 200px;
+}
+.size200{
+  border-radius: 8px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* side bar */
+.ProfileHeaderCard {
+  margin-bottom: 25px;
+  padding-right: 0px;
+  padding-left: 12%;
+  margin-top: 28%;
+  position: relative;
+}
+.ProfileHeaderCard-name {
+  line-height: 1;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.ProfileHeaderCard-nameLink {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  word-wrap: break-word;
+  color: inherit!important;
+}
+.ProfileHeaderCard-screenname {  
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.ProfileHeaderCard-screenname1{
+  color: #8899a6;
+}
+.ProfileHeaderCard-bio {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+.iconsall{
+  color: #8899a6;
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 6px;
+}
+.iconsvalue{
+  color: #292f33;
+  display: inline-block;
+  margin-top: 2px;
+  padding-left: 3px;
+  font-weight: 400;
+  font-size: 14px;
+}
+/*
+tweet timeline css
+ */
+.tweet-main{
+  background-color: #FFF;
+  margin-top: 20px;
+  border: 1px solid #e1e8ed;
+  border-bottom: 0;
+  border-radius: 7px;
+  width: 73%;
+}
+.tweet {
+  border-bottom: 1px solid #e1e8ed;
+  color: #8899a6;
+  cursor: pointer;
+  position: relative;
+  min-height: 51px;
+  padding: 9px 12px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;  
+}
+.tweet-content {
+    margin-left: 58px;
+}
+.tweet-avatar{
+  float: left;
+  margin-top: 3px;
+  margin-left: -58px;
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  -moz-force-broken-image-icon: 1;
+}
+.fullname {
+  font-weight: bold;
+  color: #292f33;
+}
+.username {
+  font-size: 13px;
+  color: #8899a6;
+  font-weight: 600;
+}
+.media_image{
+  width: 100%;
+  height: 100%;
+}
+.TweetTextSize{
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #292f33;
+}
+.tweet-img-url{
+  color: #1da1f2;
+}
+.AdaptiveMedia{
+  padding: 1px;
+  border: 1px solid rgba(0,0,0,.1);
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.stream-item-footer {
+  display: table;
+  width: 100%;
+  margin-bottom: 2px;
+  margin-top: 10px;
+}
+.ProfileTweet-action {
+    display: inline-block;
+    width: 80px;
+}
+.footer-icon:hover{
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.68);
+}
+.retweet-icon:hover {
+  color: #19cf86;
+  font-weight: 700;
+}
+.favorite-icon:hover{
+  font-weight: 700;
+  color: #e81c4f;
+}
+/*
+/----
+----
+----/
+ */
+.container > header {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 30px 50px 30px;
+}
+
+.container > header {
+  padding: 60px 30px 50px;
+  text-align: center;
+}
+
+.container > header h1 {
+  font-size: 57px;
+  line-height: 38px;
+  margin: 0 auto;
+  font-weight: 700;
+  color: #1da1f2;
+}
+
+.container > header h1 span {
+  color: #a7a7a7;
+  display: block;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 2.5;
+}
+
+.main > footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: #FFF;
+}
+
+.main > footer p {
+  display: block;
+  padding: 10px;
+}
+
+.grid {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.grid li {
+  display: inline-block;
+  margin: 10px 5px 0 5px;
+  vertical-align: top;
+  height: 250px;
+  border-radius: 3px;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.media {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 250px;
+  z-index: 1;
+}
+
+.content {
+  padding: 100px 8px 8px;
+  position: absolute;
+  background: #edeff0;
+  width: 250px;
+  height: 250px;
+  z-index: 0;
+}
+
+.comment {
+  margin-top: 12px;
+  color: #b7c0c7;
+  font-size: 14px;
+  max-height: 88px;
+  overflow: hidden;
+}
+
+.comment:hover {
+  color: rgba(69, 70, 70, 0.9);
+}
+
+.content > p {
+  display: inline-block;
+  color: #9BA6B0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.content > .avatar {
+  background-size: 40px auto;
+  border-radius: 50%;
+  display: inline-block;
+  height: 40px;
+  margin-right: 8px;
+  vertical-align: bottom;
+  width: 40px;
+}
+
+/* Video.js play button */
+.vjs-default-skin
+.vjs-big-play-button:before {
+  color: #fff !important;
+  text-shadow: none !important;
+  line-height: 0 !important;
+}
+.vjs-default-skin
+.vjs-big-play-button {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  left: 50% !important;
+  top: 50% !important;
+  font-size: 8em !important;
+  margin-left: -30px !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+.vjs-default-skin:hover .vjs-big-play-button,
+.vjs-default-skin .vjs-big-play-button:focus {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
+  transition: none !important;
+}
+
+.post-states{
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+}
+.icons-css{
+  width: auto;
+  margin: 0 0 0 12px;
+  display: inline;
+  font-size: 15px;
+  line-height: 1;
+  color: #aaa;
+  margin-left: 0;
+  border-left: none;
+  padding-left: 18px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+}
+.icons-css-like:hover{
+  color: #FF0000;
+}
+.icons-css-comments:hover{
+  color: #040903;
+}
