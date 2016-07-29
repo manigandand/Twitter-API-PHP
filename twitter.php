@@ -2,11 +2,16 @@
 session_start();
 require_once 'src/TwitterAPIExchange1.php';
 require 'config.php';
+// check whether this is vaild request
+if (!isset($_SESSION['name']) && !isset($_SESSION['user_screen_name'])) {
+    // Redirect to index
+    header('Location: getUserData.php');
+}
 /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
 
 $settings = array(
-    'oauth_access_token'        => $_SESSION['user_oauth_token'],
-    'oauth_access_token_secret' => $_SESSION['user_oauth_token_secret'],
+    'oauth_access_token'        => $_COOKIE['user_oauth_token_cookie'],
+    'oauth_access_token_secret' => $_COOKIE['user_oauth_token_secret_cookie'],
     'consumer_key'              => CONSUMER_KEY,
     'consumer_secret'           => CONSUMER_SECRET,
 );
@@ -225,6 +230,13 @@ if ($string["errors"][0]["message"] != "") {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
 $(document).ready(function(){
+    <?php
+if ($_GET['Suc'] == 200) {?>
+        alert("Welcome back <?php echo $_SESSION['user_name']; ?> ");
+    <?php } elseif ($_GET['Suc'] != 200) {?>
+        alert("Welcome <?php echo $_SESSION['user_name']; ?> ");
+   <?php }?>
+
     $(".twitter-fa").click(function(){
         $('html, body').animate({scrollTop:40}, 'slow');
     });

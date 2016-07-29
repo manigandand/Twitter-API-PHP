@@ -4,15 +4,11 @@ require_once 'src/abraham/twitteroauth.php';
 require 'config.php';
 
 //check whether user already logged in with twitter
-if (isset($_SESSION['name']) && isset($_SESSION['twitter_id'])) {
-    echo "Name :" . $_SESSION['name'] . "<br>";
-    echo "Twitter ID :" . $_SESSION['twitter_id'] . "<br>";
-    echo "Image :<img src='" . $_SESSION['image'] . "'/><br>";
-    echo "<br/><a href='logout.php'>Logout</a>";
-
+if (isset($_COOKIE['user_oauth_token_cookie']) && isset($_COOKIE['user_oauth_token_secret_cookie'])) {
+    // Redirect to twiiter Timeline
+    header('Location: twitter.php?Suc=200');
 } else // Not logged in
 {
-
     $connection    = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
     $request_token = $connection->getRequestToken(OAUTH_CALLBACK); //get Request Token
 

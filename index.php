@@ -1,3 +1,11 @@
+<?php
+if (isset($_COOKIE['user_oauth_token_cookie']) && isset($_COOKIE['user_oauth_token_secret_cookie'])) {
+    if ($_GET['Err'] != 401 && $_GET['Err'] != 402 && $_GET['Suc'] != 200) {
+        header('Location: getUserData.php');
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,5 +57,27 @@
         </footer>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    <?php
+if ($_GET['Err'] == 401) {?>
+        alert("Your session has expired. Please log in again");
+        var anchor = document.createElement('a');
+        anchor.href = "http://127.0.0.1/Twitter-API-PHP/index.php";
+        document.body.appendChild(anchor);
+        anchor.click();
+<?php } elseif ($_GET['Err'] == 402) {?>
+    alert("Something went wrong. Please log in again");
+    var anchor = document.createElement('a');
+    anchor.href = "http://127.0.0.1/Twitter-API-PHP/index.php";
+    document.body.appendChild(anchor);
+    anchor.click();
+<?php } elseif ($_GET['Suc'] == 200) {?>
+    alert("Hope you enjoyed this!");
+<?php }
+?>
+});
+</script>
 </body>
 </html>
